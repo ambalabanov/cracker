@@ -7,7 +7,7 @@ import (
 	"os"
 	"sync"
 
-	"github.com/ambalabanov/go/nthash"
+	"github.com/ambalabanov/nthash"
 )
 
 var wg sync.WaitGroup
