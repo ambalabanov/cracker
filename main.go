@@ -37,8 +37,8 @@ func main() {
 func brute(pass string) {
 	if nthash.CheckHash(pass, *hash) {
 		fmt.Println("Congratz!!!")
-		fmt.Println("Pass:" + "\t" + pass)
-		fmt.Println("Hash:" + "\t" + *hash)
+		fmt.Printf("Pass:\t%s\n", pass)
+		fmt.Printf("Hash:\t%s\n", *hash)
 		os.Exit(0)
 	}
 	wg.Done()
