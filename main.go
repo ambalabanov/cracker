@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"runtime"
 	"sync"
 
 	"github.com/ambalabanov/nthash"
@@ -15,6 +16,7 @@ var hash = flag.String("hash", "de26cce0356891a4a020e7c4957afc72", "NTHash")
 var fWordlistName = flag.String("wordlist", "wordlist.txt", "wordlist file")
 
 func main() {
+	runtime.GOMAXPROCS(4)
 	flag.Parse()
 	fWordlist, err := os.Open(*fWordlistName)
 	if err != nil {
